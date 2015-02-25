@@ -47,6 +47,7 @@ class node-js {
   }
 }
 
+/*
 class mongodb {
   exec { "10genKeys":
     command => "sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10",
@@ -67,8 +68,9 @@ class mongodb {
     require => [Exec["aptGetUpdate"],File["10gen.list"]]
   }
 }
+*/
 
 include apt_update
 include othertools
 include node-js
-include mongodb
+#include mongodb
